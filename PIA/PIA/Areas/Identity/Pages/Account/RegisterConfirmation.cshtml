@@ -1,0 +1,28 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Register confirmation";
+}
+
+<h1>@ViewData["Title"]</h1>
+@{
+    if (@Model.DisplayConfirmAccountLink)
+    {
+        <br/>
+        <p class="textocentr">
+            <a id="confirm-link" href="@Model.EmailConfirmationUrl">Haga click en este texto para confirmar su cuenta</a>
+        </p>
+        <div class="imgcentrcon">
+
+            <img src="https://rickesdigital.com/wp-content/uploads/2020/08/confirm-1174801_1280-1024x1024.png" class="imgconfirm">
+        </div>
+
+    }
+    else
+    {
+<p>
+        Please check your email to confirm your account.
+</p>
+    }
+}
+
